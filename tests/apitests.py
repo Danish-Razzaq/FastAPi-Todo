@@ -1,7 +1,10 @@
 from fastapi.testclient import TestClient
-from main import app
+from fastapi_todo  import main
 
-client = TestClient(app)
+
+App = main.app
+
+client = TestClient(App)
 
 def test_create_todo():
     # Test creating a new todo item
